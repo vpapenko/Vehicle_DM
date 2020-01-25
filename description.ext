@@ -1,0 +1,24 @@
+class Header
+{
+	gameType =   DM;
+	minPlayers =  1
+	maxPlayers = 60;
+};
+
+disabledAI = 1;
+
+respawn = "INSTANT";
+respawnDelay = 2;
+respawnTemplates[] = {"instant", "counter", "vdm_respawn"};
+
+joinUnassigned = 0;
+briefing = 0;
+
+class CfgRespawnTemplates
+{
+	class vdm_respawn
+	{
+		onPlayerKilled = "scripts\vdm_killed.sqf";
+		onPlayerRespawn = "scripts\vdm_respawn.sqf";
+	};
+};
